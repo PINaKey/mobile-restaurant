@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Smythe&display=swap"
+            rel="stylesheet"
+        />
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="index.css" />
+    </head>
+    <body>
+        <!-- Header Section -->
+        <header class="header-section">
+            <h1>Pinaki's Dinner</h1>
+            <p class="description">The best burgers and pizzas in town</p>
+        </header>
+
+        <!-- Menu Section -->
+        <section class="menu" id="menu">
+            <!-- Menu Items goes here -->
+        </section>
+
+        <!-- Cart Section -->
+        <section class="cart" id="cart">
+            <h2 class="cart-title">Your order</h2>
+            <div id="cart-items">
+                <!-- cart item goes here -->
+            </div>
+            <div class="total-line-item">
+                <h3 class="item-name">Total Price</h3>
+                <p class="total-item-price" id="total-item-price"></p>
+            </div>
+            <button class="complete-order-btn" id="complete-order-btn">
+                Complete order
+            </button>
+        </section>
+
+        <!-- Card Details Modal -->
+        <div class="modal" id="modal">
+            <div class="modal-close-btn-container">
+                <button class="modal-close-btn" id="modal-close-btn">X</button>
+            </div>
+            <h2>Enter card details</h2>
+            <form id="card-details-form">
+                <input
+                    type="text"
+                    name="name"
+                    placeholder="Enter your name"
+                    aria-label="Name"
+                    required
+                />
+                <input
+                    type="text"
+                    name="card-number"
+                    placeholder="Enter card number"
+                    aria-label="Card number"
+                    maxlength="12"
+                    minlength="12"
+                    required
+                />
+                <input
+                    type="password"
+                    name="cvv"
+                    placeholder="Enter CVV"
+                    aria-label="CVV Number"
+                    minlength="3"
+                    maxlength="3"
+                    required
+                />
+                <button class="pay-btn">Pay</button>
+            </form>
+        </div>
+
+        <!-- Backdrop for Card Details Modal -->
+        <div id="backdrop" class="backdrop"></div>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
